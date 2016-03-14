@@ -1,0 +1,16 @@
+body {
+    background-image: url(../img/hl2wp.jpg);
+}
+
+.menu {
+    text-align: center;
+    padding: 5px 0px;
+}
+
+.menu li {
+    display: inline;
+    color: white;
+    margin: 2px 5px;
+    border: 2px solid black;
+    padding: 2px 8px;
+}
