@@ -1,5 +1,10 @@
 body {
     background-image: url(../img/hl2wp.jpg);
+    background-size: 100% 100%;
+}
+
+body p {
+	color: white;
 }
 
 .menu {
@@ -17,4 +22,19 @@ body {
     margin: 2px 5px;
     border: 2px solid black;
     padding: 2px 8px;
+}
+
+.content {
+	border: 2px solid white;
+	min-height: 92vh;
+	width: 100%;
+}
+
+.profile-picture {
+	
+}
+
+.profile-picture img {
+	height: 200px;
+	width: 200px;
 }
