@@ -7,6 +7,10 @@ body {
     padding: 5px 0px;
 }
 
+.menu a {
+	text-decoration: none;
+}
+
 .menu li {
     display: inline;
     color: white;
