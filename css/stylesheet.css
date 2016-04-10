@@ -1,6 +1,7 @@
 body {
     background-image: url(../img/hl2wp.jpg);
     background-size: 100% 100%;
+    overflow: hidden;
 }
 
 body p {
