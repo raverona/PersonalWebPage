@@ -45,9 +45,10 @@
 			
 			<!-- MUSIC PLAYER -->
 			<div class="music-player">
-				<audio controls="controls" loop="loop" preload="metadata">
+				<p>Now playing: <span id="song-title"></span> by <span id="song-artist"></span></p>
+				<audio id="player" controls="controls" loop="loop" preload="metadata">
 					Seu navegador não suporta a rádio Rafael Verona
-					<source src="audio/Blink-182-IMissYou.mp3" type="audio/mpeg">
+					<source id="now-playing" src="" type="audio/mpeg">
 				</audio>
 			</div>
 			
