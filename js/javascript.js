@@ -30,6 +30,7 @@ function next_song() {
 		curr_song_number++;
 	}
 	load_song(curr_song_number);
+	document.getElementById("player").play();
 }
 
 function previous_song() {
@@ -40,6 +41,7 @@ function previous_song() {
 		curr_song_number--;
 	}
 	load_song(curr_song_number);
+	document.getElementById("player").play();
 }
 
 window.onload = function () {
@@ -49,6 +51,9 @@ window.onload = function () {
 	});
 
 	$("#next-button").click(function() {
+		next_song();
+	});
+	$("#player").bind("ended", function(){
 		next_song();
 	});
 };
