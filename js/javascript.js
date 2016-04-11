@@ -15,7 +15,7 @@ function set_artist_name(song_number) {
 }
 
 function next_song() {
-
+	
 }
 
 function previous_song() {

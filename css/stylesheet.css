@@ -53,15 +53,24 @@ body p {
 	margin: 5px;
 }
 
+#player {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .footer {
 	position: fixed;
 	bottom: 0;
 }
 
-#next-button {
-
+#next-button, #previous-button {
+	display: inline-block;
+	margin: 6px;
+	padding: 3px;
+	border: white 2px solid;
 }
 
-#previous-button {
-
+#next-button p, #previous-button p {
+	display: inline;
 }
