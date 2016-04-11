@@ -4,12 +4,12 @@ var song_list = {
 var curr_song = 1;
 
 function set_song_title(song_number) {
-	var song_title = song_list["title_" . curr_song];
+	var song_title = song_list["title_" + song_number];
 	var html_song_tile_placeholder = document.getElementById("song-title").innerHTML = song_title;
 }
 
 function set_artist_name(song_number) {
-	var song_title = song_list["artist_" . curr_song];
+	var song_title = song_list["artist_" + song_number];
 	var html_song_tile_placeholder = document.getElementById("song-artist").innerHTML = song_title;
 }
 
