@@ -29,10 +29,11 @@ body p {
 	border: 2px solid white;
 	min-height: 92vh;
 	width: 100%;
+	position: relative;
 }
 
 .profile-picture {
-	
+	float: left;
 }
 
 .profile-picture img {
@@ -40,4 +41,14 @@ body p {
 	width: 200px;
 	margin: 10px;
 	border: 7px outset black;
+}
+
+.music-player {
+	position: fixed;
+	right: 6px;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
 }
