@@ -1,3 +1,7 @@
+#equipe li span {
+	font-weight: bold;
+}
+
 .cronograma {
 	border: medium ridge black;
 }
