@@ -27,12 +27,10 @@
 		
 		<!-- MENU -->
 		<ul class="menu">
-			<div>
 			<a href="index.html"><li>Home</li></a>
-			<a href="mac0499.html"><li>TCC</li></a>
+			<a href="mac0499.html" target="_blank"><li>TCC</li></a>
 			<a href="#"><li>Projetos</li></a>
 			<a href="#"><li>Links</li></a>
-			</div>
 		</ul>
 		
 		<!-- CONTENT -->
@@ -46,10 +44,12 @@
 			<!-- MUSIC PLAYER -->
 			<div class="music-player">
 				<p>Now playing: <span id="song-title"></span> by <span id="song-artist"></span></p>
-				<audio id="player" controls="controls" loop="loop" preload="metadata">
+				<audio id="player" controls="controls" loop="loop" preload="metadata" volume=0.5>
 					Seu navegador não suporta a rádio Rafael Verona
 					<source id="now-playing" src="" type="audio/mpeg">
 				</audio>
+				<div id="next-button"></div>
+				<div id="previous-button"></div>
 			</div>
 			
 			<!-- FOOTER -->

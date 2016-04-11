@@ -46,9 +46,22 @@ body p {
 .music-player {
 	position: fixed;
 	right: 6px;
+	float: right;
+	text-align: center;
+	border: white 2px solid;
+	padding: 6px;
+	margin: 5px;
 }
 
 .footer {
 	position: fixed;
 	bottom: 0;
+}
+
+#next-button {
+
+}
+
+#previous-button {
+
 }
