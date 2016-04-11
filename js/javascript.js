@@ -2,7 +2,7 @@ var song_list = {
 	artist_1: "Blink-182",					title_1: "I Miss You",				path_1: "audio/Blink-182-IMissYou.mp3",
 	artist_2: "Boys Like Girls",			title_2: "Two Is Better Than One",	path_2: "audio/BoysLikeGirls-TwoIsBetterThanOne.mp3"
 };
-var curr_song_number = 2;
+var curr_song_number = 1;
 var max_songs_number = 2;
 
 function set_song_title(song_number) {
