@@ -1,0 +1,11 @@
+.cronograma {
+	border: medium ridge black;
+}
+
+.cronograma td {
+	border: thin solid black;
+}
+
+.centered-text {
+	text-align: center;
+}
