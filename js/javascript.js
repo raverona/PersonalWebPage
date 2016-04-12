@@ -47,6 +47,7 @@ function previous_song() {
 
 window.onload = function () {
 	load_song(curr_song_number);
+	document.getElementById("player").volume = 0.5;
 	$("#previous-button").click(function() {
 		previous_song();
 	});
