@@ -17,6 +17,10 @@ body p {
 	text-decoration: none;
 }
 
+.menu a li:hover {
+	background-color: blue;
+}
+
 .menu li {
     display: inline;
     color: white;
@@ -71,6 +75,7 @@ body p {
 	margin: 6px;
 	padding: 3px;
 	border: white 2px solid;
+	cursor: pointer;
 }
 
 #next-button p, #previous-button p {
