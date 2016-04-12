@@ -32,6 +32,10 @@ body p {
 	position: relative;
 }
 
+.content p {
+	display: inline-block;
+}
+
 .profile-picture {
 	float: left;
 }
