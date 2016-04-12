@@ -1,11 +1,12 @@
 var song_list = {
 	artist_1: "Blink-182",					title_1: "I Miss You",				path_1: "audio/Blink-182-IMissYou.mp3",
 	artist_2: "Boys Like Girls",			title_2: "Two Is Better Than One",	path_2: "audio/BoysLikeGirls-TwoIsBetterThanOne.mp3",
-	artist_3: "Syd Matters",				title_3: "Obstacles",				path_3: "audio/SydMatters-Obstacles.mp3"
+	artist_3: "Syd Matters",				title_3: "Obstacles",				path_3: "audio/SydMatters-Obstacles.mp3",
+	artist_4: "Avenged Sevenfold",			title_4: "So Far Away",				path_4: "audio/AvengedSevenfold-SoFarAway.mp3"
 };
 
 var curr_song_number = 1;
-var max_songs_number = 3;
+var max_songs_number = 4;
 
 function set_song_title(song_number) {
 	document.getElementById("song-title").innerHTML = song_list["title_" + song_number];
