@@ -66,6 +66,16 @@ body p {
 	border: white 2px solid;
 	padding: 6px;
 	margin: 5px;
+	width: 300px;
+	height: 150px;
+	position: relative;
+}
+
+#audio-wrapper {
+	width: inherit;
+	height: 80px;
+	position: absolute;
+	bottom: 0px;
 }
 
 #player {
@@ -74,9 +84,35 @@ body p {
 	margin-right: auto;
 }
 
+#player-buttons {
+	width: inherit;
+	bottom: 0px;
+	position: absolute;
+}
+
 #playlist-selector {
 	float: right;
 	clear: right;
+	display: inline-block;
+	border: white 2px solid;
+	margin: 5px;
+	padding: 6px;
+}
+
+#playlists-button {
+	display: inline;
+}
+
+#songs-button {
+	display: inline;
+}
+
+#playlists-button p {
+	display: inline;
+}
+
+#songs-button p {
+	display: inline;
 }
 
 .footer {

@@ -19,7 +19,7 @@ var playlist = {
 	name_2: "8-bit Games",					list_2: song_list_2
 };
 
-var curr_playlist_selector = 2;
+var curr_playlist_selector = 1;
 var max_playlists_selector = 2;
 
 function load_playlist(playlist_number) {

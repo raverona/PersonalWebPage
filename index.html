@@ -44,21 +44,25 @@
 			<!-- MUSIC PLAYER -->
 			<div class="music-player">
 				<p>Now playing: <span id="song-title"></span> by <span id="song-artist"></span></p>
-				<audio id="player" controls="controls" preload="auto">
-					Seu navegador não suporta a rádio Rafael Verona
-					<source id="now-playing" src="" type="audio/mpeg">
-				</audio>
-				<div id="previous-button"><p>Anterior</p></div>
-				<div id="next-button"><p>Próxima</p></div>
+				<div id="audio-wrapper">
+					<audio id="player" controls="controls" preload="auto">
+						Seu navegador não suporta a rádio Rafael Verona
+						<source id="now-playing" src="" type="audio/mpeg">
+					</audio>
+					<div id="player-buttons">
+						<div id="previous-button"><p>Anterior</p></div>
+						<div id="next-button"><p>Próxima</p></div>
+					</div>
+				</div>
 			</div>
 
 			<!-- PLAYLIST SELECTOR -->
 			<div id="playlist-selector">
 				<div id="playlists-button">
-					Playlists
+					<p>Playlists</p>
 				</div>
 				<div id="songs-button">
-					Músicas
+					<p>Músicas</p>
 				</div>
 				<div id="music-container">
 
