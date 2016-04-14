@@ -80,7 +80,9 @@ function previous_song(playlist_number) {
 
 window.onload = function () {
 	load_song(1, curr_playlist_selector);
-	document.getElementById("player").volume = 0.5;
+
+	document.getElementById("player").volume = 0.4;
+
 	$("#previous-button").click(function() {
 		previous_song(curr_playlist_selector);
 	});
@@ -88,6 +90,7 @@ window.onload = function () {
 	$("#next-button").click(function() {
 		next_song(curr_playlist_selector);
 	});
+
 	$("#player").bind("ended", function(){
 		next_song(curr_playlist_selector);
 	});
