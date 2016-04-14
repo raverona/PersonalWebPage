@@ -18,7 +18,7 @@ body p {
 }
 
 .menu a li:hover {
-	background-color: blue;
+	background-color: orangered;
 }
 
 .menu li {
@@ -27,6 +27,15 @@ body p {
     margin: 2px 5px;
     border: 2px solid black;
     padding: 2px 8px;
+}
+
+.menu li:active {
+	color: black;
+	border: 2px solid white;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 .content {
@@ -66,7 +75,8 @@ body p {
 }
 
 #playlist-selector {
-
+	float: right;
+	clear: right;
 }
 
 .footer {
@@ -80,6 +90,23 @@ body p {
 	padding: 3px;
 	border: white 2px solid;
 	cursor: pointer;
+}
+
+#next-button:active, #previous-button:active {
+	background-color: white;
+	border: black 3px solid;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#next-button p:active, #previous-button p:active {
+	color: black;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 #next-button p, #previous-button p {
