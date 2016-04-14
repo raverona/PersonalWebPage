@@ -22,6 +22,10 @@ var playlist = {
 var curr_playlist_selector = 2;
 var max_playlists_selector = 2;
 
+function load_playlist(playlist_number) {
+
+}
+
 function select_playlist(playlist_number) {
 
 }
@@ -78,6 +82,19 @@ function previous_song(playlist_number) {
 	document.getElementById("player").play();
 }
 
+function auto_next_song(playlist_number){
+	var song_list = playlist["list_" + playlist_number];
+	if (song_list["curr_song"] == song_list["size"]) {
+		song_list["curr_song"] = 1;
+		load_song(song_list["curr_song"], playlist_number);
+	}
+	else {
+		song_list["curr_song"]++;
+		load_song(song_list["curr_song"], playlist_number);
+		document.getElementById("player").play();
+	}
+}
+
 window.onload = function () {
 	load_song(1, curr_playlist_selector);
 
@@ -92,6 +109,6 @@ window.onload = function () {
 	});
 
 	$("#player").bind("ended", function(){
-		next_song(curr_playlist_selector);
+		auto_next_song(curr_playlist_selector);
 	});
 };
