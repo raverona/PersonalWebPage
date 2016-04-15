@@ -94,25 +94,30 @@ body p {
 	float: right;
 	clear: right;
 	display: inline-block;
-	border: white 2px solid;
 	margin: 5px;
 	padding: 6px;
+	width: 300px;
 }
 
-#playlists-button {
+#playlists-button, #songs-button {
+	display: inline;
+	padding: 6px;
+    border: white 2px solid;
+}
+
+#playlists-button p, #songs-button p {
 	display: inline;
 }
 
-#songs-button {
-	display: inline;
+#select-buttons-wrapper {
+	border: white 2px solid;
+	display: inline-block;
+	padding: 6px 0px;
 }
 
-#playlists-button p {
-	display: inline;
-}
-
-#songs-button p {
-	display: inline;
+#music-container {
+	border: white 2px solid;
+	width: 300px;
 }
 
 .footer {
