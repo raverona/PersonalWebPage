@@ -120,6 +120,11 @@ body p {
 	width: 300px;
 }
 
+.list-item {
+    margin: 5px 0px;
+    padding: 6px;
+}
+
 .footer {
 	position: fixed;
 	bottom: 0;

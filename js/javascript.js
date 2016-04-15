@@ -23,7 +23,15 @@ var curr_playlist_selector = 1;
 var max_playlists_selector = 2;
 
 function load_playlist(playlist_number) {
-
+	var song_list = playlist["list_" + playlist_number];
+	var list_container = document.getElementById("music-container");
+	var i;
+	for (i = 1; i <= song_list["size"]; i++) {
+		var list_element = document.createElement('p');
+		list_element.className = "list-item";
+		list_element.innerHTML = song_list["artist_" + i] + " - " + song_list["title_" + i];
+		list_container.appendChild(list_element);
+	}
 }
 
 function select_playlist(playlist_number) {
@@ -97,6 +105,7 @@ function auto_next_song(playlist_number){
 
 window.onload = function () {
 	load_song(1, curr_playlist_selector);
+	load_playlist(curr_playlist_selector);
 
 	document.getElementById("player").volume = 0.4;
 
