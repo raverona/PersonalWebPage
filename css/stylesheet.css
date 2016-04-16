@@ -114,8 +114,24 @@ body p {
 	display: inline;
 }
 
+#playlists-button:active, #songs-button:active {
+	background-color: white;
+	border: black 3px solid;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#playlists-button p:active, #songs-button p:active {
+	color: black;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
 #select-buttons-wrapper {
-	border: white 2px solid;
 	display: inline-block;
 	padding: 6px 0px;
 }
