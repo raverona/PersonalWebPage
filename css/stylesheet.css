@@ -114,8 +114,11 @@ body p {
 	display: inline;
 }
 
+#playlists-button:hover, #songs-button:hover {
+	background-color: orangered;
+}
+
 #playlists-button:active, #songs-button:active {
-	background-color: white;
 	border: black 3px solid;
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -159,8 +162,11 @@ body p {
 	cursor: pointer;
 }
 
+#next-button:hover, #previous-button:hover {
+	background-color: orangered;
+}
+
 #next-button:active, #previous-button:active {
-	background-color: white;
 	border: black 3px solid;
 	-webkit-user-select: none;
 	-moz-user-select: none;
