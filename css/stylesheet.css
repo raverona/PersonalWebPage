@@ -45,7 +45,7 @@ body p {
 	position: relative;
 }
 
-.content p {
+.content > p {
 	display: inline-block;
 }
 
@@ -103,6 +103,11 @@ body p {
 	display: inline;
 	padding: 6px;
     border: white 2px solid;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: pointer;
 }
 
 #playlists-button p, #songs-button p {
