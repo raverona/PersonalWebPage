@@ -15,16 +15,27 @@ var song_list_2 = {
 };
 
 var playlist = {
+	size: 2,
+	curr_playlist: 1,
 	name_1: "Pop Punk",						list_1: song_list_1,
 	name_2: "8-bit Games",					list_2: song_list_2
 };
 
-var curr_playlist_selector = 1;
-var max_playlists_selector = 2;
+var curr_playlist_songs_loaded = false;
+var playlists_loaded = false;
 
-function load_playlist(playlist_number) {
+function remove_child_elements(parent) {
+	while (parent.firstChild) {
+		parent.removeChild(parent.firstChild);
+	}
+}
+
+function show_playlist_songs(playlist_number) {
+	if (curr_playlist_songs_loaded == true) return;
+	playlists_loaded = false;
 	var song_list = playlist["list_" + playlist_number];
 	var list_container = document.getElementById("music-container");
+	remove_child_elements(list_container);
 	var i;
 	for (i = 1; i <= song_list["size"]; i++) {
 		var list_element = document.createElement('p');
@@ -32,6 +43,22 @@ function load_playlist(playlist_number) {
 		list_element.innerHTML = song_list["artist_" + i] + " - " + song_list["title_" + i];
 		list_container.appendChild(list_element);
 	}
+	curr_playlist_songs_loaded = true;
+}
+
+function show_playlists(max_playlists) {
+	if (playlists_loaded == true) return;
+	curr_playlist_songs_loaded = false;
+	var list_container = document.getElementById("music-container");
+	remove_child_elements(list_container);
+	var i;
+	for (i = 1; i <= max_playlists; i++) {
+		var list_element = document.createElement('p');
+		list_element.className = "list-item";
+		list_element.innerHTML = playlist["name_" + i];
+		list_container.appendChild(list_element);
+	}
+	playlists_loaded = true;
 }
 
 function select_playlist(playlist_number) {
@@ -44,10 +71,6 @@ function next_playlist() {
 
 function previous_playlist() {
 
-}
-
-function show_playlists(max_playlists) {
-	
 }
 
 function set_song_title(song_number, song_list) {
@@ -104,20 +127,27 @@ function auto_next_song(playlist_number){
 }
 
 window.onload = function () {
-	load_song(1, curr_playlist_selector);
-	load_playlist(curr_playlist_selector);
+	load_song(1, playlist["curr_playlist"]);
 
 	document.getElementById("player").volume = 0.4;
 
 	$("#previous-button").click(function() {
-		previous_song(curr_playlist_selector);
+		previous_song(playlist["curr_playlist"]);
 	});
 
 	$("#next-button").click(function() {
-		next_song(curr_playlist_selector);
+		next_song(playlist["curr_playlist"]);
+	});
+
+	$("#songs-button").click(function() {
+		show_playlist_songs(playlist["curr_playlist"]);
+	});
+
+	$("#playlists-button").click(function() {
+		show_playlists(playlist["size"]);
 	});
 
 	$("#player").bind("ended", function(){
-		auto_next_song(curr_playlist_selector);
+		auto_next_song(playlist["curr_playlist"]);
 	});
 };
