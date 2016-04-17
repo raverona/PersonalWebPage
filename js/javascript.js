@@ -84,6 +84,7 @@ function load_song(song_number, playlist_number) {
 function load_playlist(playlist_number) {
 	playlist["curr_playlist"] = playlist_number;
 	load_song((playlist["list_" + playlist_number])["curr_song"], playlist_number);
+	show_playlist_songs(playlist_number);
 }
 
 function next_song(playlist_number) {
