@@ -185,3 +185,14 @@ body p {
 #next-button p, #previous-button p {
 	display: inline;
 }
+
+.song:active, .playlist:active {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.song, .playlist {
+	cursor: pointer;
+}

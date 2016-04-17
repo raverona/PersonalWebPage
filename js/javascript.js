@@ -39,38 +39,30 @@ function show_playlist_songs(playlist_number) {
 	var i;
 	for (i = 1; i <= song_list["size"]; i++) {
 		var list_element = document.createElement('p');
-		list_element.className = "list-item";
+		list_element.className = "list-item song";
+		list_element.id = i;
 		list_element.innerHTML = song_list["artist_" + i] + " - " + song_list["title_" + i];
 		list_container.appendChild(list_element);
 	}
+	bind_songs_double_click(song_list);
 	curr_playlist_songs_loaded = true;
 }
 
-function show_playlists(max_playlists) {
+function show_playlists(playlist_list) {
 	if (playlists_loaded == true) return;
 	curr_playlist_songs_loaded = false;
 	var list_container = document.getElementById("music-container");
 	remove_child_elements(list_container);
 	var i;
-	for (i = 1; i <= max_playlists; i++) {
+	for (i = 1; i <= playlist_list["size"]; i++) {
 		var list_element = document.createElement('p');
-		list_element.className = "list-item";
+		list_element.className = "list-item playlist";
+		list_element.id = i;
 		list_element.innerHTML = playlist["name_" + i];
 		list_container.appendChild(list_element);
 	}
+	bind_playlists_double_click(playlist_list);
 	playlists_loaded = true;
-}
-
-function select_playlist(playlist_number) {
-
-}
-
-function next_playlist() {
-
-}
-
-function previous_playlist() {
-
 }
 
 function set_song_title(song_number, song_list) {
@@ -87,6 +79,11 @@ function load_song(song_number, playlist_number) {
 	document.getElementById("player").load();
 	set_song_title(song_number, song_list);
 	set_artist_name(song_number, song_list);
+}
+
+function load_playlist(playlist_number) {
+	playlist["curr_playlist"] = playlist_number;
+	load_song((playlist["list_" + playlist_number])["curr_song"], playlist_number);
 }
 
 function next_song(playlist_number) {
@@ -126,6 +123,25 @@ function auto_next_song(playlist_number){
 	}
 }
 
+function bind_songs_double_click(song_list) {
+	var i;
+	for (i = 1; i <= song_list["size"]; i++) {
+		$("#" + i).dblclick(function () {
+			load_song(event.target.id, playlist["curr_playlist"]);
+			document.getElementById("player").play();
+		});
+	}
+}
+
+function bind_playlists_double_click(playlist_list) {
+	var i;
+	for (i = 1; i <= playlist_list["size"]; i++) {
+		$("#" + i).dblclick(function () {
+			load_playlist(event.target.id);
+		});
+	}
+}
+
 window.onload = function () {
 	load_song(1, playlist["curr_playlist"]);
 
@@ -144,7 +160,7 @@ window.onload = function () {
 	});
 
 	$("#playlists-button").click(function() {
-		show_playlists(playlist["size"]);
+		show_playlists(playlist);
 	});
 
 	$("#player").bind("ended", function(){
