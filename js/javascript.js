@@ -75,6 +75,7 @@ function set_artist_name(song_number, song_list) {
 
 function load_song(song_number, playlist_number) {
 	var song_list = playlist["list_" + playlist_number];
+	song_list["curr_song"] = song_number;
 	document.getElementById("now-playing").src = song_list["path_" + song_number];
 	document.getElementById("player").load();
 	set_song_title(song_number, song_list);
@@ -128,7 +129,7 @@ function bind_songs_double_click(song_list) {
 	var i;
 	for (i = 1; i <= song_list["size"]; i++) {
 		$("#" + i).dblclick(function () {
-			load_song(event.target.id, playlist["curr_playlist"]);
+			load_song(Number(event.target.id), playlist["curr_playlist"]);
 			document.getElementById("player").play();
 		});
 	}
