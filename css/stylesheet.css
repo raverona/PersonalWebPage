@@ -45,7 +45,7 @@ body p {
 	position: relative;
 }
 
-.content p {
+.content > p {
 	display: inline-block;
 }
 
@@ -103,14 +103,38 @@ body p {
 	display: inline;
 	padding: 6px;
     border: white 2px solid;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: pointer;
 }
 
 #playlists-button p, #songs-button p {
 	display: inline;
 }
 
+#playlists-button:hover, #songs-button:hover {
+	background-color: orangered;
+}
+
+#playlists-button:active, #songs-button:active {
+	border: black 3px solid;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#playlists-button p:active, #songs-button p:active {
+	color: black;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
 #select-buttons-wrapper {
-	border: white 2px solid;
 	display: inline-block;
 	padding: 6px 0px;
 }
@@ -138,8 +162,11 @@ body p {
 	cursor: pointer;
 }
 
+#next-button:hover, #previous-button:hover {
+	background-color: orangered;
+}
+
 #next-button:active, #previous-button:active {
-	background-color: white;
 	border: black 3px solid;
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -157,4 +184,15 @@ body p {
 
 #next-button p, #previous-button p {
 	display: inline;
+}
+
+.song:active, .playlist:active {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.song, .playlist {
+	cursor: pointer;
 }

@@ -15,39 +15,54 @@ var song_list_2 = {
 };
 
 var playlist = {
+	size: 2,
+	curr_playlist: 1,
 	name_1: "Pop Punk",						list_1: song_list_1,
 	name_2: "8-bit Games",					list_2: song_list_2
 };
 
-var curr_playlist_selector = 1;
-var max_playlists_selector = 2;
+var curr_playlist_songs_loaded = false;
+var playlists_loaded = false;
 
-function load_playlist(playlist_number) {
-	var song_list = playlist["list_" + playlist_number];
-	var list_container = document.getElementById("music-container");
-	var i;
-	for (i = 1; i <= song_list["size"]; i++) {
-		var list_element = document.createElement('p');
-		list_element.className = "list-item";
-		list_element.innerHTML = song_list["artist_" + i] + " - " + song_list["title_" + i];
-		list_container.appendChild(list_element);
+function remove_child_elements(parent) {
+	while (parent.firstChild) {
+		parent.removeChild(parent.firstChild);
 	}
 }
 
-function select_playlist(playlist_number) {
-
+function show_playlist_songs(playlist_number) {
+	if (curr_playlist_songs_loaded == true) return;
+	playlists_loaded = false;
+	var song_list = playlist["list_" + playlist_number];
+	var list_container = document.getElementById("music-container");
+	remove_child_elements(list_container);
+	var i;
+	for (i = 1; i <= song_list["size"]; i++) {
+		var list_element = document.createElement('p');
+		list_element.className = "list-item song";
+		list_element.id = i;
+		list_element.innerHTML = song_list["artist_" + i] + " - " + song_list["title_" + i];
+		list_container.appendChild(list_element);
+	}
+	bind_songs_double_click(song_list);
+	curr_playlist_songs_loaded = true;
 }
 
-function next_playlist() {
-
-}
-
-function previous_playlist() {
-
-}
-
-function show_playlists(max_playlists) {
-	
+function show_playlists(playlist_list) {
+	if (playlists_loaded == true) return;
+	curr_playlist_songs_loaded = false;
+	var list_container = document.getElementById("music-container");
+	remove_child_elements(list_container);
+	var i;
+	for (i = 1; i <= playlist_list["size"]; i++) {
+		var list_element = document.createElement('p');
+		list_element.className = "list-item playlist";
+		list_element.id = i;
+		list_element.innerHTML = playlist["name_" + i];
+		list_container.appendChild(list_element);
+	}
+	bind_playlists_double_click(playlist_list);
+	playlists_loaded = true;
 }
 
 function set_song_title(song_number, song_list) {
@@ -60,10 +75,17 @@ function set_artist_name(song_number, song_list) {
 
 function load_song(song_number, playlist_number) {
 	var song_list = playlist["list_" + playlist_number];
+	song_list["curr_song"] = song_number;
 	document.getElementById("now-playing").src = song_list["path_" + song_number];
 	document.getElementById("player").load();
 	set_song_title(song_number, song_list);
 	set_artist_name(song_number, song_list);
+}
+
+function load_playlist(playlist_number) {
+	playlist["curr_playlist"] = playlist_number;
+	load_song((playlist["list_" + playlist_number])["curr_song"], playlist_number);
+	show_playlist_songs(playlist_number);
 }
 
 function next_song(playlist_number) {
@@ -103,21 +125,47 @@ function auto_next_song(playlist_number){
 	}
 }
 
+function bind_songs_double_click(song_list) {
+	var i;
+	for (i = 1; i <= song_list["size"]; i++) {
+		$("#" + i).dblclick(function () {
+			load_song(Number(event.target.id), playlist["curr_playlist"]);
+			document.getElementById("player").play();
+		});
+	}
+}
+
+function bind_playlists_double_click(playlist_list) {
+	var i;
+	for (i = 1; i <= playlist_list["size"]; i++) {
+		$("#" + i).dblclick(function () {
+			load_playlist(event.target.id);
+		});
+	}
+}
+
 window.onload = function () {
-	load_song(1, curr_playlist_selector);
-	load_playlist(curr_playlist_selector);
+	load_song(1, playlist["curr_playlist"]);
 
 	document.getElementById("player").volume = 0.4;
 
 	$("#previous-button").click(function() {
-		previous_song(curr_playlist_selector);
+		previous_song(playlist["curr_playlist"]);
 	});
 
 	$("#next-button").click(function() {
-		next_song(curr_playlist_selector);
+		next_song(playlist["curr_playlist"]);
+	});
+
+	$("#songs-button").click(function() {
+		show_playlist_songs(playlist["curr_playlist"]);
+	});
+
+	$("#playlists-button").click(function() {
+		show_playlists(playlist);
 	});
 
 	$("#player").bind("ended", function(){
-		auto_next_song(curr_playlist_selector);
+		auto_next_song(playlist["curr_playlist"]);
 	});
 };
