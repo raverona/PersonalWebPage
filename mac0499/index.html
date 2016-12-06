@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>TCC MatrUSP</title>
+    <link href="img/favicon.ico" rel="icon" type="image/x-icon" />
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        MatrUSP
+                    </a>
+                </li>
+                <li>
+                    <a href="#tema">Tema, Membros e Supervisores</a>
+                </li>
+                <li>
+                    <a href="#resumo">Resumo</a>
+                </li>
+                <li>
+                    <a href="#introducao">Introdução</a>
+                </li>
+                <li>
+                    <a href="#cronograma">Cronograma</a>
+                </li>
+                <li>
+                    <a href="#resultados">Resultados</a>
+                </li>
+                <li>
+                    <a href="#monografia">Monografia, Apresentação e Pôster</a>
+                </li>
+                <li>
+                    <a href="#links">Links</a>
+                </li>
+            </ul>
+            <img id="imelogo" src="img/logoIME.png" >
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <header>
+                <p>MAC0499 - Trabalho de Formatura Supervisionado</p>
+            </header>
+            <div id="tema" class="container-fluid" style="margin-top: 45px; text-align: center">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 id="matrusp-h1">MatrUSP</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-6 personnel">
+                        <ul>
+                            <li>Membros:</li>
+                            <li class="name">Bruno de Oliveira Endo</li>
+                            <li class="name">José Ernesto Young Rodrigues</li>
+                            <li class="name">Rafael Marinaro Verona</li>
+                            <li class="institution">Instituto de Matemática e Estatística - Universidade de São Paulo</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 personnel">
+                        <ul>
+                            <li>Supervisores:</li>
+                            <li class="name">José Coelho de Pina</li>
+                            <li class="institution">Instituto de Matemática e Estatística - Universidade de São Paulo</li>
+                            <li class="name">Pedro Paulo Vezzá Campos</li>
+                            <li class="institution">Microsoft Corporation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div id="resumo" class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Resumo</h1>
+                        <p>
+                            O planejamento e organização das atividades a serem realizadas, em um próximo semestre, pelos discentes é uma parte importante na vida acadêmica e pessoal dos estudantes. O sistema JupiterWeb não supre essa necessidade, uma vez que as informações sobre disciplinas a serem oferecidas estão dispersas, não exibe graficamente as possíveis grades horárias antes do período de matrícula e não calcula as diversas possibilidades de grades de acordo com a variação das turmas para um determinado conjunto de disciplinas.
+                            O MatrUSP surgiu para resolver esses problemas e melhorar a experiência do usuário na matrícula e no seu gerenciamento de horários pessoais. Através dele é possível verificar o horário de todas as matérias disponibilizadas pela Universidade de São Paulo, verificar conflitos de horários de uma forma clara e, ainda, verificar todas as possíveis combinações de uma determinada seleção de matérias para um rápido planejamento de rotina.
+                            Os principais objetivos deste projeto são modernizar e incrementar o sistema MatrUSP, utilizando tecnologías web a fim de melhorar a usabilidade, reformular e adicionar ferramentas que facilitem ainda mais o gerenciamento do tempo, aproveitando-se também de plataformas externas amplamente utilizadas como Google Calendar e Facebook para visualizar e compartilhar esse tipo de informação.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div id="introducao" class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Introdução</h1>
+                        <h3>O que é o MatrUSP</h3>
+                        <p>
+                            O MatrUSP é um sistema para auxiliar os alunos da USP a planejarem sua matrícula. Dentro do sistema, o usuário pode escolher as disciplinas, e respectivas turmas, que pretende cursar no próximo semestre, e colocá-las em uma ordem de prioridade. Então, o software calcula todas as possibilidades de combinações das turmas selecionadas para que todos os eventos não conflitem e exibe graficamente ao usuário, permitindo que ele escolha, de forma prática, a combinação que mais lhe agrada.
+                        </p>
+                        <h3>Motivação</h3>
+                        <p>
+                            O sistema da universidade, JúpiterWeb, provê a funcionalidade de seleção de disciplinas e realização da matrícula, porém não fornece ao aluno uma forma prática de visualizar sua grade horária antes de confirmar a matrícula ou sequer qualquer tipo de visualização antes do período de matrícula, o que dificulta seu planejamento e realização, pois só é possível verificar conflitos entre as disciplinas ao se tentar salvar uma grade. O MatrUSP surgiu para  melhorar essa experiência além de trazer uma série de outras funcionalidades que serão descritas mais adiante.
+                            Além disso, durante a graduação, mesmo criando uma quantidade grande de softwares na forma de exercícios programas, não tivemos a oportunidade acadêmica de criar algo que terá grande impacto na vida de outras pessoas. Desenvolver o MatrUSP foi uma oportunidade única para deixarmos como legado um produto que atinge e melhora a vida de grande parte dos alunos da comunidade uspiana.
+                            O que torna o desenvolvimento deste software ainda mais recompensador é o fato de sermos, nós três, usuários ativos do sistema. Desde quando começamos a incluir disciplinas eletivas nas nossas grades semestrais, utilizar o MatrUSP foi muito gratificante por ele já resolver diversos problemas existentes no fluxo de matrícula. Ainda assim, sempre nos pareceu que havia espaço para aumentar o número de funcionalidades, incluir ferramentas que se mostravam úteis para nossos colegas mais próximos e para nós mesmos, e melhorar como tudo era exibido ao usuário, melhorando a interface gráfica.
+                        </p>
+                        <h3>Proposta inicial</h3>
+                        <p>
+                            Nossa proposta de trabalho é criar uma nova versão do MatrUSP que seja melhor em diversas frentes. Pretendemos reformular o design da página melhorando a interação dos usuários, nos apoiando em conceitos de interação humano-computador (IHC). Também pretendemos refatorar o código, melhorando consideravelmente a sua manutenção. Tornar o sistema flexível a ponto de ser acessível por outras universidades é mais um dos objetivos, tentando diminuir ao máximo o número de adaptações necessárias para atender às particularidades de cada universidade.
+                        </p>
+                        <p>
+                            Além disso, buscamos construir versões específicas do MatrUSP para plataformas móveis (Android, iOS e Windows Phone) caso haja tempo, pretendemos pesquisar e implementar uma forma de recomendação de disciplinas aos usuários. Existem muitos cenários onde o aluno tem pouca liberdade para escolher o que cursar no semestre e, com isso em mente, achamos interessante tentar pré-popular a grade horária com as disciplinas obrigatórias do semestre.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div id="cronograma" class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Cronograma</h1>
+                        <div class="table-responsive">
+                            <table class="cronograma table table-bordered table-striped">
+                                <tr>
+                                    <td class="centered-text">Atividades</td>
+                                    <td class="centered-text">Março</td>
+                                    <td class="centered-text">Abril</td>
+                                    <td class="centered-text">Maio</td>
+                                    <td class="centered-text">Junho</td>
+                                    <td class="centered-text">Julho</td>
+                                    <td class="centered-text">Agosto</td>
+                                    <td class="centered-text">Setembro</td>
+                                    <td class="centered-text">Outubro</td>
+                                    <td class="centered-text">Novembro</td>
+                                    <td class="centered-text">Dezembro</td>
+                                </tr>
+                                <tr>
+                                    <td>Análise de requisitos</td>
+                                    <td class="centered-text x">X</td>
+                                    <td class="centered-text x">X</td>
+                                    <td class="centered-text x">X</td>
+                                    <td class="centered-text x">X</td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text"></td>
+                                </tr>
+                                <tr>
+                                    <td>Pesquisa e leitura da bibliografia</td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text x">X</td>
+                                    <td class="centered-text x">X</td>
+                                    <td class="centered-text x">X</td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text"></td>
+                                </tr>
+                                <tr>
+                                    <td>Desenvolvimento</td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text x">X</td>
+                                    <td class="centered-text x">X</td>
+                                    <td class="centered-text x">X</td>
+                                    <td class="centered-text x">X</td>
+                                    <td class="centered-text x">X</td>
+                                    <td class="centered-text x">X</td>
+                                    <td class="centered-text x">X</td>
+                                    <td class="centered-text"></td>
+                                </tr>
+                                <tr>
+                                    <td>Testes com usuários</td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text x">X</td>
+                                    <td class="centered-text x">X</td>
+                                    <td class="centered-text x">X</td>
+                                </tr>
+                                <tr>
+                                    <td>Monografia</td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text x">X</td>
+                                    <td class="centered-text x">X</td>
+                                    <td class="centered-text x">X</td>
+                                    <td class="centered-text x">X</td>
+                                    <td class="centered-text x">X</td>
+                                </tr>
+                                <tr>
+                                    <td>Pôster</td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text x">X</td>
+                                    <td class="centered-text"></td>
+                                </tr>
+                                <tr>
+                                    <td>Apresentação</td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text"></td>
+                                    <td class="centered-text x">X</td>
+                                    <td class="centered-text"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div id="resultados" class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Resultados</h1>
+                        <figure>
+                            <img src="img/matrusp-side-by-side.jpg">
+                            <figcaption>Comparação: MatrUSP antigo (Jul/2013 - Out/2016) e MatrUSP novo (Nov/2016 - presente)</figcaption>
+                        </figure>
+                        <p>
+                            Optamos por reescrever totalmente o código e apoiar a estrutura do novo MatrUSP no conceito de árvore de estado. A árvore de estados é um objeto que representa todos os elementos conceituais do sistema tais como: grades horárias, disciplinas, turmas e aulas. Além disso, a árvore também mantém referências a objetos HTML. Ela representa completamente o estado do sistema em um determinado instante, isto é, armazena todas as informações relevantes para reproduzi-lo. Essa estrutura tornou muito mais fácil a manutenção e alterações no novo MatrUSP.
+                        </p>
+                        <p>
+                            Além de todo o modelo estrutural e documentação do código, implementamos algumas funcionalidades novas, comparando o novo software com o antigo. Agora é possível fazer download da grade horária no formato .ics e exportar para calendários virtuais tais como Thunderbird, iCalendar e Outlook. Desenvolvemos uma integração ainda mais profunda com o Google Calendar e Facebook, sendo possível exportar dados do MatrUSP para estas plataformas com apenas dois cliques, além de incluirmos a possibilidade de compartilhar uma grade horária com outras pessoas através de uma URL única.
+                        </p>
+                        <p>
+                            Outro aspecto levado em consideração foi tornar a interface gráfica mais moderna e agradável, afim de tornar o sistema mais claro e fácil de interagir. O MatrUSP antigo já possuía a funcionalidade de calcular diferentes combinações de horários de aulas, para um mesmo conjunto de disciplinas. Entretanto, ela era pouco visível e, por isso, construímos uma nova forma de visualizá-la.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div id="monografia" class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Monografia, Apresentação e Pôster</h1>
+                        <ul>
+                            <li><a href="monografia.pdf">Clique aqui para baixar a Monografia</a></li>
+                            <li><a href="apresentacao.pdf">Clique aqui para baixar a Apresentação</a></li>
+                            <li><a href="poster.pdf">Clique aqui para baixar o Pôster</a></li>
+                            <li><a href="partesubjetiva.pdf">Clique aqui para baixar a Parte Subjetiva</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div id="links" class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>Links</h1>
+                        <ul>
+                            <li>GitHub</li>
+                                <ul>
+                                    <li><a target="_blank" href="http://github.com/matrusp/matrusp">github.com/matrusp/matrusp</a></li>
+                                </ul>
+                            <li>Wiki</li>
+                                <ul>
+                                    <li><a target="_blank" href="http://github.com/matrusp/matrusp/wiki">github.com/matrusp/matrusp/wiki</a></li>
+                                </ul>
+                            <li>Site Oficial</li>
+                                <ul>
+                                    <li><a target="_blank" href="http://bcc.ime.usp.br/matrusp">bcc.ime.usp.br/matrusp</a></li>
+                                </ul>
+                            <li>Versão Antiga</li>
+                                <ul>
+                                    <li><a target="_blank" href="http://bcc.ime.usp.br/matrusp_v1">bcc.ime.usp.br/matrusp_v1</a></li>
+                                </ul>
+                            <li>Site de Homologação</li>
+                                <ul>
+                                    <li><a target="_blank" href="http://bcc.ime.usp.br/matrusp_homolog">bcc.ime.usp.br/matrusp_homolog</a></li>
+                                </ul>
+                            <li>Página no Facebook</li>
+                                <ul>
+                                    <li><a target="_blank" href="http://www.facebook.com/MatrUSP/">www.facebook.com/MatrUSP/</a></li>
+                                </ul>
+                            <li>Página na Rede Linux</li>
+                                <ul>
+                                    <li><a target="_blank" href="https://linux.ime.usp.br/~raverona/mac0499">https://linux.ime.usp.br/~raverona/mac0499</a></li>
+                                </ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>
