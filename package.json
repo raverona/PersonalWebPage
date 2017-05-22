@@ -1,0 +1,31 @@
+{
+  "name": "rafael_verona_web_page",
+  "version": "0.0.1",
+  "description": "Rafael Verona's personal web page",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raverona/PersonalWebPage.git"
+  },
+  "keywords": [
+    "web",
+    "page",
+    "personal"
+  ],
+  "author": "Rafael Verona",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raverona/PersonalWebPage/issues"
+  },
+  "homepage": "https://github.com/raverona/PersonalWebPage#readme",
+  "dependencies": {
+    "express": "^4.15.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
